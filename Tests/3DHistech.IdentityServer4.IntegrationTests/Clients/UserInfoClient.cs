@@ -194,19 +194,19 @@ namespace IdentityServer.IntegrationTests.Clients
                 Token = response.AccessToken
             });
 
-            roles = ((JArray)userInfo.Json["role"]).Select(x => x.ToString()).ToArray();
-            roles.Length.Should().Be(2);
+			roles = (userInfo.Json.TryGetStringArray("role")).Select(x => x.ToString()).ToArray();
+			roles.Length.Should().Be(2);
             roles.Should().Contain("Geek");
             roles.Should().Contain("Developer");
         }
 
-        private Dictionary<string, object> GetPayload(TokenResponse response)
-        {
-            var token = response.AccessToken.Split('.').Skip(1).Take(1).First();
-            var dictionary = JsonConvert.DeserializeObject<Dictionary<string, object>>(
-                Encoding.UTF8.GetString(Base64Url.Decode(token)));
+		private Dictionary<string, object> GetPayload(TokenResponse response)
+		{
+			var token = response.AccessToken.Split('.').Skip(1).Take(1).First();
+			var dictionary = JsonConvert.DeserializeObject<Dictionary<string, object>>(
+				Encoding.UTF8.GetString(Base64Url.Decode(token)));
 
-            return dictionary;
-        }
-    }
+			return dictionary;
+		}
+	}
 }

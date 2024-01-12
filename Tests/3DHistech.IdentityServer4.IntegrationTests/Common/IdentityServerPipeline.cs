@@ -306,37 +306,37 @@ namespace IdentityServer.IntegrationTests.Common
             return BrowserClient.GetCookie(BaseUrl, IdentityServerConstants.DefaultCheckSessionCookieName);
         }
 
-        public string CreateAuthorizeUrl(
-            string clientId = null,
-            string responseType = null,
-            string scope = null,
-            string redirectUri = null,
-            string state = null,
-            string nonce = null,
-            string loginHint = null,
-            string acrValues = null,
-            string responseMode = null,
-            string codeChallenge = null,
-            string codeChallengeMethod = null,
-            object extra = null)
-        {
-            var url = new RequestUrl(AuthorizeEndpoint).CreateAuthorizeUrl(
-                clientId: clientId,
-                responseType: responseType,
-                scope: scope,
-                redirectUri: redirectUri,
-                state: state,
-                nonce: nonce,
-                loginHint: loginHint,
-                acrValues: acrValues,
-                responseMode: responseMode,
-                codeChallenge: codeChallenge,
-                codeChallengeMethod: codeChallengeMethod,
-                extra: extra);
-            return url;
-        }
+		public string CreateAuthorizeUrl(
+			 string clientId = null,
+			 string responseType = null,
+			 string scope = null,
+			 string redirectUri = null,
+			 string state = null,
+			 string nonce = null,
+			 string loginHint = null,
+			 string acrValues = null,
+			 string responseMode = null,
+			 string codeChallenge = null,
+			 string codeChallengeMethod = null,
+			 Parameters extra = null)
+		{
+			var url = new RequestUrl(AuthorizeEndpoint).CreateAuthorizeUrl(
+				clientId: clientId,
+				responseType: responseType,
+				scope: scope,
+				redirectUri: redirectUri,
+				state: state,
+				nonce: nonce,
+				loginHint: loginHint,
+				acrValues: acrValues,
+				responseMode: responseMode,
+				codeChallenge: codeChallenge,
+				codeChallengeMethod: codeChallengeMethod,
+				extra: extra);
+			return url;
+		}
 
-        public AuthorizeResponse ParseAuthorizationResponseUrl(string url)
+		public AuthorizeResponse ParseAuthorizationResponseUrl(string url)
         {
             return new AuthorizeResponse(url);
         }
@@ -353,7 +353,7 @@ namespace IdentityServer.IntegrationTests.Common
             string responseMode = null,
             string codeChallenge = null,
             string codeChallengeMethod = null,
-            object extra = null)
+            Parameters extra = null)
         {
             var old = BrowserClient.AllowAutoRedirect;
             BrowserClient.AllowAutoRedirect = false;
