@@ -10,3 +10,7 @@
 /3DHistech.IdentityServer4/build
 /3DHistech.IdentityServer4/obj
 /Tests/3DHistech.IdentityServer4.IntegrationTests/bin/Debug/net8.0
+/3DHistech.IdentityServer4.EntityFramework.Storage/bin/Debug/net8.0
+/3DHistech.IdentityServer4.EntityFramework/obj
+/3DHistech.IdentityServer4.EntityFramework/bin/Debug/net8.0
+/3DHistech.IdentityServer4.EntityFramework.Storage/obj
