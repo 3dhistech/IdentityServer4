@@ -1,5 +1,5 @@
 # Important update
-This is a fork of the original IdentityServer4 repository made by 3DHistech.
+This is a fork of the original IdentityServer4 repository, made by 3DHistech.
 
 Changes include:
 - Fixed automapper error for dotnet8 seen [here](https://github.com/IdentityServer/IdentityServer4/issues/2812).
