@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>3DHistech.IdentityServer4.EntityFramework</Title>
-    <Version></Version>
+    <Version>1.2.0</Version>
     <Company>3DHistech</Company>
     <Description>3DHistech fork of IdentityServer4 Entityframework repository</Description>
     <RepositoryUrl>https://github.com/3dhistech/IdentityServer4</RepositoryUrl>
