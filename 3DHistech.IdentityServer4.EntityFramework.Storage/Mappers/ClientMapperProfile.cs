@@ -24,7 +24,7 @@ namespace IdentityServer4.EntityFramework.Mappers
         {
             CreateMap<Entities.ClientProperty, KeyValuePair<string, string>>()
                 .ReverseMap();
-
+            
             CreateMap<Entities.Client, Models.Client>()
                 .ForMember(dest => dest.ProtocolType, opt => opt.Condition(srs => srs != null))
                 .ForMember(x => x.AllowedIdentityTokenSigningAlgorithms, opts => opts.ConvertUsing(AllowedSigningAlgorithmsConverter.Converter, x => x.AllowedIdentityTokenSigningAlgorithms))

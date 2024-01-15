@@ -9,6 +9,7 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.IO;
 using System.Security.Cryptography;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace IdentityServer.UnitTests.Extensions
@@ -16,7 +17,7 @@ namespace IdentityServer.UnitTests.Extensions
     public class IdentityServerBuilderExtensionsCryptoTests
     {
         [Fact]
-        public void AddSigningCredential_with_json_web_key_containing_asymmetric_key_should_succeed()
+        public async Task AddSigningCredential_with_json_web_key_containing_asymmetric_key_should_fail()
         {
             IServiceCollection services = new ServiceCollection();
             IIdentityServerBuilder identityServerBuilder = new IdentityServerBuilder(services);
